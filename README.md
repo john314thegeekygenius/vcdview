@@ -1,8 +1,16 @@
 # VCDVIEW 
 ## A terminal based VCD viewer 
 
-#### Installation
-Open a terminal in the project directory with the README.md 
+#### Installation (From Wheel File)
+Download the latest whl file from the releases tab. <br>
+Install with the command:
+```
+pip install <vcdview-x.x.x.whl> 
+```
+Replacing `vcdview-x.x.x.whl` with the correct wheel name.
+
+#### Installation (From Project Directory)
+Open a terminal in the same directory as the README.md <br>
 Run the following command:
 ```
 pip install .

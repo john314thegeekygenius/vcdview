@@ -1,3 +1,5 @@
 src/vcdview.egg-info
 src/vcdview/__pycache__
+build
+dist
 
