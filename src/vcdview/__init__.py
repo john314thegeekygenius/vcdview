@@ -1,2 +1,2 @@
-
-__version__ = "0.1.0"
+# THIS IS AN AUTO GENERATED FILE! DO NOT MODIFY
+__version__ = "0.1.3"
