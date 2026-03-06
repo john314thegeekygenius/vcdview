@@ -1,5 +1,7 @@
 src/vcdview.egg-info
 src/vcdview/__pycache__
+__pycache__
 build
 dist
-
+*.py
+*.sh

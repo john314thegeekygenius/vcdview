@@ -118,7 +118,7 @@ def binstr2hexstr(val):
             if curhexval <= -1:
                 hexstr += "X"
             else:
-                hexstr += str(hex(curhexval)[2])
+                hexstr += str(hex(curhexval)[2]).lower()
                 curhexval = 0
         if i == len(val):
             break
@@ -132,7 +132,17 @@ def binstr2hexstr(val):
     return hexstr 
 
 def binstr2decstr(val):
-    return "XX"
+    hstr = binstr2hexstr(val)
+    dval = 0
+    for c in hstr:
+        dval *= 16
+        if c == "X":
+            return "XX"
+        for i, l in enumerate("0123456789abcdef"):
+            if c == l:
+                dval += i 
+                break 
+    return str(dval)
 
 def render_wvf(wf_data, stop_data=True,zoom=1,sub_zoom=1,tick_spacing=20,show_tticks=True):
     global render_variables
@@ -258,15 +268,15 @@ def render_wvf(wf_data, stop_data=True,zoom=1,sub_zoom=1,tick_spacing=20,show_tt
                     # TODO:
                     # bits need to be independent because 
                     # 01uxz is a valid set of bits... 
-                show_bin = False 
-                show_hex = True
+                show_bin = False
+                show_hex = False
                 if show_bin:
                     wave_lines[name].append(Fore.MAGENTA)
                     for iii in range(time_step):
                         if iii >= len(val):
                             wave_lines[name].append(Style.RESET_ALL)
-                        wave_lines[name].append("."*(time_step-iii))
-                        break
+                            wave_lines[name].append("."*(time_step-iii))
+                            break
                         wave_lines[name].append(val[iii])
                 elif show_hex:
                     hexval = binstr2hexstr(val)
