@@ -1,8 +1,14 @@
 # VCDVIEW 
 ## A terminal based VCD viewer 
-### (because this apparently doesn't exist already...)
 
-How it works:
+#### Installation
+Open a terminal in the project directory with the README.md 
+Run the following command:
+```
+pip install .
+```
+
+#### How it works
 1. Create a vcd waveform (somehow)
 2. Run this program with the waveform as the argument:
 ```

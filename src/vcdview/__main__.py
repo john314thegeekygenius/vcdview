@@ -5,7 +5,7 @@ from .cli import cli_run
 
 def main():
     if len(sys.argv) < 2:
-        print(f"Usage: python3 -m vcdview <file.vcd>")
+        print(f"Usage: vcdview <file.vcd>")
         sys.exit(1)
 
     wavedata = parse_vcd(sys.argv[1])
