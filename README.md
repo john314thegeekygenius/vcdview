@@ -5,9 +5,9 @@
 Download the latest whl file from the releases tab. <br>
 Install with the command:
 ```
-pip install <vcdview-x.x.x.whl> 
+pip install vcdview-x.x.x-py3-none-any.whl
 ```
-Replacing `vcdview-x.x.x.whl` with the correct wheel name.
+Replacing `vcdview-x.x.x-py3-none-any.whl` with the correct wheel name.
 
 #### Installation (From Project Directory)
 Open a terminal in the same directory as the README.md <br>
